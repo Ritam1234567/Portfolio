@@ -9,100 +9,205 @@
 
 <style>
 :root {
-  --bg:#0b1120; --panel:rgba(255,255,255,0.08); --glass:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.14); --text:#e5e7eb; --muted:#9ca3af;
-  --primary:#38bdf8; --accent:#818cf8;
+  --bg:#0b1120;
+  --panel:rgba(255,255,255,0.08);
+  --glass:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.14);
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --primary:#38bdf8;
+  --accent:#818cf8;
 }
 .light {
-  --bg:#f8fafc; --panel:#fff; --glass:rgba(0,0,0,0.04);
-  --border:rgba(0,0,0,0.12); --text:#020617; --muted:#475569;
-  --primary:#0284c7; --accent:#6366f1;
+  --bg:#f8fafc;
+  --panel:#ffffff;
+  --glass:rgba(0,0,0,0.04);
+  --border:rgba(0,0,0,0.12);
+  --text:#020617;
+  --muted:#475569;
+  --primary:#0284c7;
+  --accent:#6366f1;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Inter,system-ui,sans-serif;
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Inter, system-ui, sans-serif;
   background:
     radial-gradient(900px 500px at 10% -10%, rgba(56,189,248,.15), transparent),
     radial-gradient(800px 400px at 90% 10%, rgba(129,140,248,.15), transparent),
     var(--bg);
-  color:var(--text); line-height:1.75;
+  color:var(--text);
+  line-height:1.75;
 }
-a{color:var(--primary);text-decoration:none}
-.container{max-width:1150px;margin:auto;padding:90px 24px}
-section{margin-bottom:110px}
-.theme-toggle{
-  position:fixed;top:22px;right:22px;
-  padding:10px 14px;border-radius:12px;
-  background:var(--glass);border:1px solid var(--border);
-  backdrop-filter:blur(12px);cursor:pointer;color:var(--text)
+
+a { color:var(--primary); text-decoration:none; }
+
+.container {
+  max-width:1150px;
+  margin:auto;
+  padding:90px 24px;
 }
-.hero{
-  min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;
-  gap:50px;align-items:center
+
+section { margin-bottom:110px; }
+
+/* Toggle */
+.theme-toggle {
+  position:fixed;
+  top:22px;
+  right:22px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:var(--glass);
+  border:1px solid var(--border);
+  backdrop-filter:blur(12px);
+  cursor:pointer;
+  color:var(--text);
+  z-index:1000;
 }
-.hero h1{font-size:3.4rem;font-weight:800}
-.hero h2{color:var(--muted);margin:18px 0 28px}
-.hero p{color:var(--muted);max-width:640px}
-.actions a{
-  display:inline-block;margin:30px 12px 0 0;
-  padding:14px 24px;border-radius:14px;
-  border:1px solid var(--border);background:var(--glass);
-  transition:.3s
+
+/* Hero */
+.hero {
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:50px;
+  align-items:center;
 }
-.actions a.primary{
+
+.hero h1 {
+  font-size:3.4rem;
+  font-weight:800;
+}
+
+.hero h2 {
+  color:var(--muted);
+  margin:18px 0 24px;
+  font-weight:500;
+}
+
+.hero p {
+  color:var(--muted);
+  max-width:640px;
+}
+
+.actions a {
+  display:inline-block;
+  margin:30px 12px 0 0;
+  padding:14px 24px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:var(--glass);
+  transition:.3s;
+}
+
+.actions a.primary {
   background:linear-gradient(135deg,var(--primary),var(--accent));
-  color:#020617;border:none
+  color:#020617;
+  border:none;
 }
-.actions a:hover{transform:translateY(-4px)}
-.hero-card{
-  background:var(--panel);border:1px solid var(--border);
-  border-radius:24px;padding:32px;backdrop-filter:blur(18px)
+
+.actions a:hover { transform:translateY(-4px); }
+
+.hero-card {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:32px;
+  backdrop-filter:blur(18px);
 }
-.hero-card p{color:var(--muted)}
-h3{font-size:2.1rem;margin-bottom:36px}
-.grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:32px
+
+.hero-card p { color:var(--muted); margin-bottom:6px; }
+
+/* Titles */
+h3 {
+  font-size:2.1rem;
+  margin-bottom:36px;
 }
-.card{
-  background:var(--panel);border:1px solid var(--border);
-  border-radius:22px;padding:30px;backdrop-filter:blur(16px);
-  transition:.35s
+
+/* Grid & Cards */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
 }
-.card:hover{transform:translateY(-10px)}
-.card p{color:var(--muted)}
-.skill{
-  padding:16px;border-radius:14px;
-  background:var(--glass);border:1px solid var(--border);
-  text-align:center;font-weight:600
+
+.card {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:30px;
+  backdrop-filter:blur(16px);
+  transition:.35s;
 }
-.tag{
-  display:inline-block;font-size:12px;padding:6px 14px;
-  margin:8px 8px 0 0;border-radius:999px;
-  background:rgba(56,189,248,.18);color:var(--primary)
+
+.card:hover { transform:translateY(-10px); }
+
+.card p { color:var(--muted); margin-top:10px; }
+
+/* Skills */
+.skill {
+  padding:16px;
+  border-radius:14px;
+  background:var(--glass);
+  border:1px solid var(--border);
+  text-align:center;
+  font-weight:600;
 }
-.project-links{margin-top:18px}
-.project-links a{
-  display:inline-block;padding:10px 18px;
-  border-radius:12px;font-size:14px;font-weight:600;
-  border:1px solid var(--border);background:var(--glass);
+
+/* Tags */
+.tag {
+  display:inline-block;
+  font-size:12px;
+  padding:6px 14px;
+  margin:8px 8px 0 0;
+  border-radius:999px;
+  background:rgba(56,189,248,.18);
+  color:var(--primary);
 }
-.project-links a.primary{
+
+/* Project Links */
+.project-links {
+  margin-top:18px;
+}
+
+.project-links a {
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:600;
+  border:1px solid var(--border);
+  background:var(--glass);
+}
+
+.project-links a.primary {
   background:linear-gradient(135deg,var(--primary),var(--accent));
-  color:#020617;border:none
+  color:#020617;
+  border:none;
 }
-.fade{opacity:0;transform:translateY(30px);animation:fadeUp .9s ease forwards}
-@keyframes fadeUp{to{opacity:1;transform:none}}
+
+/* Animation */
+.fade {
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp .9s ease forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity:1; transform:none; }
+}
+
+/* Responsive */
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .hero h1{font-size:2.7rem}
+  .hero { grid-template-columns:1fr; }
+  .hero h1 { font-size:2.6rem; }
 }
 </style>
 </head>
 
 <body>
 
-
+<button class="theme-toggle" id="themeToggle">🌗</button>
 
 <!-- HERO -->
 <div class="container hero fade">
@@ -110,10 +215,11 @@ h3{font-size:2.1rem;margin-bottom:36px}
     <h1>Ritam Paul</h1>
     <h2>Full Stack Developer · MERN · Machine Learning</h2>
     <p>
-      MCA graduate with proven expertise in full-stack development, machine learning,
-      data analytics, and AWS deployment. Experienced in building scalable MERN
-      applications, RESTful APIs, and ML models to deliver business insights.
+      MCA graduate and Full Stack Developer with hands-on experience in building
+      scalable MERN applications, RESTful APIs, and machine learning solutions.
+      Strong background in data analytics, AWS deployment, and Agile development.
     </p>
+
     <div class="actions">
       <a class="primary" href="mailto:paulritam23050000@gmail.com">Contact Me</a>
       <a href="https://github.com/Ritam1234567" target="_blank">GitHub</a>
@@ -123,7 +229,7 @@ h3{font-size:2.1rem;margin-bottom:36px}
 
   <div class="hero-card">
     <p>🎓 MCA Graduate</p>
-    <p>💻 MERN Stack Developer</p>
+    <p>💻 Full Stack (MERN)</p>
     <p>📊 Data & ML Projects</p>
     <p>☁️ AWS Deployment</p>
   </div>
@@ -151,9 +257,10 @@ h3{font-size:2.1rem;margin-bottom:36px}
   <h4>Software Development Intern — Trusnetix Technologies Pvt. Ltd.</h4>
   <p><em>Jan 2025 – Present</em></p>
   <p>
-    Built and deployed MERN-based streaming platform features including authentication,
-    search, bookmarking, and trailers. Implemented recommendation systems achieving
-    a 4.8/5 user engagement score. Collaborated in Agile teams and deployed using AWS.
+    • Developed and deployed features for a MERN-based streaming platform including authentication,
+    search, bookmarking, and trailers.<br/>
+    • Implemented recommendation systems achieving a 4.8/5 user engagement score.<br/>
+    • Collaborated in Agile teams and deployed applications using AWS services.
   </p>
 </div>
 </section>
@@ -166,32 +273,28 @@ h3{font-size:2.1rem;margin-bottom:36px}
 <div class="card">
   <h4>Cinematique – Streaming Platform</h4>
   <p>
-    Full-stack movie streaming application with personalized recommendations,
-    ad-based monetization, and AWS deployment.
+    Full-stack movie streaming application with secure authentication,
+    personalized recommendations, ad-based monetization, and AWS deployment.
   </p>
   <span class="tag">MERN</span>
   <span class="tag">TMDB API</span>
   <span class="tag">AWS</span>
   <div class="project-links">
-    <a class="primary" href="https://github.com/Ritam1234567/Cinematique" target="_blank">
-      Source Code
-    </a>
+    <a class="primary" href="https://github.com/Ritam1234567/Cinematique" target="_blank">Source Code</a>
   </div>
 </div>
 
 <div class="card">
   <h4>Ensemble Skin Cancer Classification Tool</h4>
   <p>
-    Machine learning ensemble model using CNN and Random Forest
-    achieving 85%+ accuracy on 10K+ medical images.
+    Machine learning ensemble model using CNN and Random Forest achieving
+    85%+ accuracy on 10K+ medical images.
   </p>
   <span class="tag">Python</span>
   <span class="tag">CNN</span>
   <span class="tag">Scikit-learn</span>
   <div class="project-links">
-    <a class="primary" href="https://github.com/Ritam1234567/DL-skin-cancer-detection" target="_blank">
-      Source Code
-    </a>
+    <a class="primary" href="https://github.com/Ritam1234567/DL-skin-cancer-detection" target="_blank">Source Code</a>
   </div>
 </div>
 
@@ -201,16 +304,17 @@ h3{font-size:2.1rem;margin-bottom:36px}
 <!-- EDUCATION -->
 <section class="fade">
 <h3>Education</h3>
-<div class="card">
-  <h4>Master of Computer Applications (MCA)</h4>
-  <p>Assam Don Bosco University, Guwahati</p>
-  <p><em>Aug 2023 – Jul 2025</em></p>
-</div>
-<br/>
-<div class="card">
-  <h4>Bachelor of Vocational in Information Technology</h4>
-  <p>Bholanath College, Dhubri, Assam</p>
-  <p><em>Aug 2019 – Jul 2022</em></p>
+<div class="grid">
+  <div class="card">
+    <h4>Master of Computer Applications (MCA)</h4>
+    <p>Assam Don Bosco University, Guwahati</p>
+    <p><em>Aug 2023 – Jul 2025</em></p>
+  </div>
+  <div class="card">
+    <h4>Bachelor of Vocational in Information Technology</h4>
+    <p>Bholanath College, Dhubri, Assam</p>
+    <p><em>Aug 2019 – Jul 2022</em></p>
+  </div>
 </div>
 </section>
 
@@ -226,13 +330,16 @@ h3{font-size:2.1rem;margin-bottom:36px}
 </div>
 
 <script>
-const toggle=document.getElementById("themeToggle");
-const saved=localStorage.getItem("theme");
-if(saved==="light")document.body.classList.add("light");
-toggle.onclick=()=>{
+const toggle = document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") document.body.classList.add("light");
+
+toggle.onclick = () => {
   document.body.classList.toggle("light");
-  localStorage.setItem("theme",
-    document.body.classList.contains("light")?"light":"dark");
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("light") ? "light" : "dark"
+  );
 };
 </script>
 
