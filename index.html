@@ -101,8 +101,10 @@ h3{font-size:2.1rem;margin-bottom:36px}
 </head>
 
 <body>
+
 <button class="theme-toggle" id="themeToggle">🌗</button>
 
+<!-- HERO -->
 <div class="container hero fade">
   <div>
     <h1>Ritam Paul</h1>
@@ -114,7 +116,7 @@ h3{font-size:2.1rem;margin-bottom:36px}
     </p>
     <div class="actions">
       <a class="primary" href="mailto:paulritam23050000@gmail.com">Contact Me</a>
-      <a href="https://github.com/ritampaul" target="_blank">GitHub</a>
+      <a href="https://github.com/Ritam1234567" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/ritam-paul-ab9311197" target="_blank">LinkedIn</a>
     </div>
   </div>
@@ -129,6 +131,7 @@ h3{font-size:2.1rem;margin-bottom:36px}
 
 <div class="container">
 
+<!-- SKILLS -->
 <section class="fade">
 <h3>Technical Skills</h3>
 <div class="grid">
@@ -141,19 +144,21 @@ h3{font-size:2.1rem;margin-bottom:36px}
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="fade">
 <h3>Experience</h3>
 <div class="card">
-  <h4>Software Development Intern — Trusnetix Technologies</h4>
-  <p><em>Present</em></p>
+  <h4>Software Development Intern — Trusnetix Technologies Pvt. Ltd.</h4>
+  <p><em>Jan 2025 – Present</em></p>
   <p>
     Built and deployed MERN-based streaming platform features including authentication,
     search, bookmarking, and trailers. Implemented recommendation systems achieving
-    a 4.8/5 user engagement score. Collaborated in Agile teams and deployed on AWS.
+    a 4.8/5 user engagement score. Collaborated in Agile teams and deployed using AWS.
   </p>
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="fade">
 <h3>Projects</h3>
 <div class="grid">
@@ -164,19 +169,72 @@ h3{font-size:2.1rem;margin-bottom:36px}
     Full-stack movie streaming application with personalized recommendations,
     ad-based monetization, and AWS deployment.
   </p>
-  <span class="tag">MERN</span><span class="tag">TMDB API</span><span class="tag">AWS</span>
+  <span class="tag">MERN</span>
+  <span class="tag">TMDB API</span>
+  <span class="tag">AWS</span>
   <div class="project-links">
-    <a class="primary" href="https://github.com/Ritam1234567/Cinematique" target="_blank">Source Code</a>
+    <a class="primary" href="https://github.com/Ritam1234567/Cinematique" target="_blank">
+      Source Code
+    </a>
   </div>
 </div>
 
 <div class="card">
   <h4>Ensemble Skin Cancer Classification Tool</h4>
   <p>
-    ML ensemble model using CNN and Random Forest achieving 85%+ accuracy
-    on 10K+ medical images.
-    <div class="project-links">
-    <a class="primary" href="https:h//github.com/Ritam1234567/DL-skin-cancer-detection" target="_blank">Source Code</a>
-  </div>
+    Machine learning ensemble model using CNN and Random Forest
+    achieving 85%+ accuracy on 10K+ medical images.
   </p>
-  <span class="tag">Python</s
+  <span class="tag">Python</span>
+  <span class="tag">CNN</span>
+  <span class="tag">Scikit-learn</span>
+  <div class="project-links">
+    <a class="primary" href="https://github.com/Ritam1234567/DL-skin-cancer-detection" target="_blank">
+      Source Code
+    </a>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="fade">
+<h3>Education</h3>
+<div class="card">
+  <h4>Master of Computer Applications (MCA)</h4>
+  <p>Assam Don Bosco University, Guwahati</p>
+  <p><em>Aug 2023 – Jul 2025</em></p>
+</div>
+<br/>
+<div class="card">
+  <h4>Bachelor of Vocational in Information Technology</h4>
+  <p>Bholanath College, Dhubri, Assam</p>
+  <p><em>Aug 2018 – Jul 2021</em></p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="fade">
+<h3>Contact</h3>
+<p>Email: <a href="mailto:paulritam23050000@gmail.com">paulritam23050000@gmail.com</a></p>
+<p>Phone: +91 84867 71913</p>
+<p>GitHub: <a href="https://github.com/Ritam1234567">github.com/Ritam1234567</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/ritam-paul-ab9311197">ritam-paul</a></p>
+</section>
+
+</div>
+
+<script>
+const toggle=document.getElementById("themeToggle");
+const saved=localStorage.getItem("theme");
+if(saved==="light")document.body.classList.add("light");
+toggle.onclick=()=>{
+  document.body.classList.toggle("light");
+  localStorage.setItem("theme",
+    document.body.classList.contains("light")?"light":"dark");
+};
+</script>
+
+</body>
+</html>
