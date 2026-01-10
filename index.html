@@ -8,9 +8,6 @@
 <meta name="description" content="Ritam Paul – Full Stack Developer specializing in MERN stack, Machine Learning, and Cloud Deployment." />
 
 <style>
-/* =====================
-   THEME VARIABLES
-===================== */
 :root {
   --bg: #0b1120;
   --panel: rgba(255,255,255,0.08);
@@ -33,13 +30,10 @@
   --accent: #6366f1;
 }
 
-/* =====================
-   RESET & BASE
-===================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   background:
     radial-gradient(900px 500px at 10% -10%, rgba(56,189,248,0.15), transparent),
     radial-gradient(800px 400px at 90% 10%, rgba(129,140,248,0.15), transparent),
@@ -58,9 +52,7 @@ a { color: var(--primary); text-decoration: none; }
 
 section { margin-bottom: 110px; }
 
-/* =====================
-   TOGGLE
-===================== */
+/* Toggle */
 .theme-toggle {
   position: fixed;
   top: 22px;
@@ -74,9 +66,7 @@ section { margin-bottom: 110px; }
   cursor: pointer;
 }
 
-/* =====================
-   HERO
-===================== */
+/* Hero */
 .hero {
   min-height: 100vh;
   display: grid;
@@ -93,7 +83,6 @@ section { margin-bottom: 110px; }
 
 .hero h2 {
   font-size: 1.4rem;
-  font-weight: 500;
   color: var(--muted);
   margin-bottom: 28px;
 }
@@ -123,9 +112,7 @@ section { margin-bottom: 110px; }
 
 .actions a:hover { transform: translateY(-4px); }
 
-/* =====================
-   HERO CARD
-===================== */
+/* Hero Card */
 .hero-card {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -134,27 +121,15 @@ section { margin-bottom: 110px; }
   backdrop-filter: blur(18px);
 }
 
-.hero-card h4 {
-  margin-bottom: 12px;
-  font-size: 1.2rem;
-}
+.hero-card p { color: var(--muted); }
 
-.hero-card p {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* =====================
-   TITLES
-===================== */
+/* Titles */
 h3 {
   font-size: 2.1rem;
   margin-bottom: 36px;
 }
 
-/* =====================
-   GRID & CARDS
-===================== */
+/* Grid & Cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -170,13 +145,11 @@ h3 {
   transition: 0.35s;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-}
+.card:hover { transform: translateY(-10px); }
 
-/* =====================
-   SKILLS
-===================== */
+.card p { color: var(--muted); }
+
+/* Skills */
 .skill {
   font-weight: 600;
   padding: 16px;
@@ -186,9 +159,7 @@ h3 {
   text-align: center;
 }
 
-/* =====================
-   TAGS
-===================== */
+/* Tags */
 .tag {
   display: inline-block;
   font-size: 12px;
@@ -199,9 +170,31 @@ h3 {
   color: var(--primary);
 }
 
-/* =====================
-   ANIMATION
-===================== */
+/* Project Links */
+.project-links {
+  margin-top: 18px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  transition: 0.3s;
+}
+
+.project-links a.primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #020617;
+  border: none;
+}
+
+.project-links a:hover { transform: translateY(-3px); }
+
+/* Animation */
 .fade {
   opacity: 0;
   transform: translateY(30px);
@@ -212,9 +205,7 @@ h3 {
   to { opacity: 1; transform: none; }
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* Responsive */
 @media(max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2.7rem; }
@@ -232,8 +223,8 @@ h3 {
     <h2>Full Stack Developer · MERN · Machine Learning</h2>
     <p>
       Full Stack Developer with experience building scalable web applications,
-      RESTful APIs, and intelligent systems. Strong expertise in React, Node.js,
-      MongoDB, Python, Machine Learning, SQL, Git, and AWS cloud deployment.
+      RESTful APIs, and intelligent systems using React, Node.js, MongoDB,
+      Python, Machine Learning, SQL, Git, and AWS.
     </p>
     <div class="actions">
       <a class="primary" href="mailto:paulritam23050000@gmail.com">Contact Me</a>
@@ -243,7 +234,6 @@ h3 {
   </div>
 
   <div class="hero-card">
-    <h4>Quick Snapshot</h4>
     <p>🎓 MCA Graduate</p>
     <p>💻 MERN Stack Developer</p>
     <p>🧠 AI & Machine Learning Projects</p>
@@ -270,35 +260,53 @@ h3 {
 <div class="grid">
 
 <div class="card">
-<h4>Cinematique – Streaming Platform</h4>
-<p>
-End-to-end movie streaming platform with authentication,
-recommendation engine, and scalable backend services.
-</p>
-<span class="tag">MERN</span>
-<span class="tag">AWS</span>
-<span class="tag">REST API</span>
+  <h4>Cinematique – Streaming Platform</h4>
+  <p>
+    Full-stack movie streaming platform with authentication,
+    recommendation engine, and scalable backend services.
+  </p>
+  <span class="tag">MERN</span>
+  <span class="tag">AWS</span>
+  <span class="tag">REST API</span>
+
+  <div class="project-links">
+    <a class="primary" href="https://github.com/ritampaul/cinematique" target="_blank">
+      Source Code
+    </a>
+  </div>
 </div>
 
 <div class="card">
-<h4>Skin Cancer Classification System</h4>
-<p>
-AI-based medical imaging solution using CNN and Random Forest
-models to classify skin cancer with high accuracy.
-</p>
-<span class="tag">Python</span>
-<span class="tag">CNN</span>
-<span class="tag">Machine Learning</span>
+  <h4>Skin Cancer Classification System</h4>
+  <p>
+    AI-powered medical imaging system using CNN and Random Forest
+    models to classify skin cancer with high accuracy.
+  </p>
+  <span class="tag">Python</span>
+  <span class="tag">CNN</span>
+  <span class="tag">Machine Learning</span>
+
+  <div class="project-links">
+    <a class="primary" href="https://github.com/ritampaul/skin-cancer-classification" target="_blank">
+      Source Code
+    </a>
+  </div>
 </div>
 
 <div class="card">
-<h4>Library Database Management System</h4>
-<p>
-Relational database system improving inventory tracking,
-data accuracy, and operational efficiency.
-</p>
-<span class="tag">PHP</span>
-<span class="tag">MySQL</span>
+  <h4>Library Database Management System</h4>
+  <p>
+    Database-driven system improving inventory tracking,
+    data accuracy, and operational efficiency.
+  </p>
+  <span class="tag">PHP</span>
+  <span class="tag">MySQL</span>
+
+  <div class="project-links">
+    <a class="primary" href="https://github.com/ritampaul/library-management-system" target="_blank">
+      Source Code
+    </a>
+  </div>
 </div>
 
 </div>
