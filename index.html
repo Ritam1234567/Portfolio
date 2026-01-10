@@ -272,3 +272,121 @@ h3{
   <div class="skill">C · C++ · Python · Java · SQL</div>
   <div class="skill">React.js · Node.js · MongoDB</div>
   <div class="skill">HTML · CSS · REST APIs</div>
+  <div class="skill">Machine Learning · Scikit-learn</div>
+  <div class="skill">Excel · Data Visualization</div>
+  <div class="skill">GitHub · AWS · Agile</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="fade">
+<h3>Experience</h3>
+<div class="card">
+  <h4>Software Development Intern — Trusnetix Technologies Pvt. Ltd.</h4>
+  <p><em>Jan 2025 – Present</em></p>
+  <ul>
+    <li>Developed and deployed features for a MERN-based streaming platform including authentication, search, bookmarking, and trailers.</li>
+    <li>Implemented intelligent recommendation systems achieving a <strong>4.8/5</strong> user engagement score.</li>
+    <li>Collaborated in Agile teams and deployed applications using AWS services.</li>
+  </ul>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="fade">
+<h3>Projects</h3>
+<div class="grid">
+
+<div class="card">
+  <h4>Cinematique – Streaming Platform</h4>
+  <p>
+    Full-stack movie streaming application with secure authentication,
+    personalized recommendations, ad-based monetization, and AWS deployment.
+  </p>
+  <span class="tag">MERN</span>
+  <span class="tag">TMDB API</span>
+  <span class="tag">AWS</span>
+  <div class="project-links">
+    <a class="primary" href="https://github.com/Ritam1234567/Cinematique" target="_blank">Source Code</a>
+  </div>
+</div>
+
+<div class="card">
+  <h4>Ensemble Skin Cancer Classification Tool</h4>
+  <p>
+    Machine learning ensemble model using CNN and Random Forest achieving
+    <strong>85%+</strong> accuracy on 10K+ medical images.
+  </p>
+  <span class="tag">Python</span>
+  <span class="tag">CNN</span>
+  <span class="tag">Scikit-learn</span>
+  <div class="project-links">
+    <a class="primary" href="https://github.com/Ritam1234567/DL-skin-cancer-detection" target="_blank">Source Code</a>
+  </div>
+</div>
+
+<div class="card">
+  <h4>Library Database Management System</h4>
+  <p>
+    Database-driven library management system designed to optimize book inventory,
+    categorization, and planning.
+  </p>
+  <ul>
+    <li>Identified underutilized book categories and high-demand subjects using data analysis.</li>
+    <li>Improved inventory planning efficiency by <strong>85%</strong> through system optimization.</li>
+    <li>Implemented secure CRUD operations and QA-tested workflows.</li>
+  </ul>
+  <span class="tag">HTML</span>
+  <span class="tag">CSS</span>
+  <span class="tag">PHP</span>
+  <span class="tag">MySQL</span>
+  <div class="project-links">
+    <a class="primary" href="https://github.com/Ritam1234567/library-management-system" target="_blank">Source Code</a>
+  </div>
+  <p style="margin-top:12px;font-size:13px;color:var(--muted)">📅 July 2020</p>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="fade">
+<h3>Education</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Master of Computer Applications (MCA)</h4>
+    <p>Assam Don Bosco University, Guwahati</p>
+    <p><em>Aug 2023 – Jul 2025</em></p>
+  </div>
+  <div class="card">
+    <h4>Bachelor of Vocational in Information Technology</h4>
+    <p>Bholanath College, Dhubri, Assam</p>
+    <p><em>Aug 2019 – Jul 2022</em></p>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="fade">
+<h3>Contact</h3>
+<p>Email: <a href="mailto:paulritam23050000@gmail.com">paulritam23050000@gmail.com</a></p>
+<p>Phone: +91 84867 71913</p>
+<p>GitHub: <a href="https://github.com/Ritam1234567">github.com/Ritam1234567</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/ritam-paul-ab9311197">ritam-paul</a></p>
+</section>
+
+</div>
+
+<script>
+const toggle=document.getElementById("themeToggle");
+const savedTheme=localStorage.getItem("theme");
+if(savedTheme==="light")document.body.classList.add("light");
+toggle.onclick=()=>{
+  document.body.classList.toggle("light");
+  localStorage.setItem("theme",
+    document.body.classList.contains("light")?"light":"dark");
+};
+</script>
+
+</body>
+</html>
